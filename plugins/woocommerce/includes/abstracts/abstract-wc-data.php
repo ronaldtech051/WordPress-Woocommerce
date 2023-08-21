@@ -845,17 +845,17 @@ abstract class WC_Data {
 	 * @return mixed
 	 */
 	protected function get_prop( $prop, $context = 'view' ) {
-		$value = null;
+		$prop_value = null;
 
 		if ( array_key_exists( $prop, $this->data ) ) {
-			$value = array_key_exists( $prop, $this->changes ) ? $this->changes[ $prop ] : $this->data[ $prop ];
+			$prop_value = array_key_exists( $prop, $this->changes ) ? $this->changes[ $prop ] : $this->data[ $prop ];
 
 			if ( 'view' === $context ) {
-				$value = apply_filters( $this->get_hook_prefix() . $prop, $value, $this );
+				$prop_value = apply_filters( $this->get_hook_prefix() . $prop, $prop_value, $this );
 			}
 		}
 
-		return $value;
+		return $prop_value;
 	}
 
 	/**
