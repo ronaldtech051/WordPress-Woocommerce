@@ -1,416 +1,62 @@
-Contribution: 2017-07-14 10:00
+<p align="center"><a href="https://woocommerce.com/"><img src="https://woocommerce.com/wp-content/themes/woo/images/logo-woocommerce@2x.png" alt="WooCommerce"></a></p>
 
-Contribution: 2017-07-14 10:01
+Welcome to the WooCommerce Monorepo on GitHub. Here you can find all of the plugins, packages, and tools used in the development of the core WooCommerce plugin as well as WooCommerce extensions. You can browse the source, look at open issues, contribute code, and keep tracking of ongoing development.
 
-Contribution: 2017-07-14 10:02
+We recommend all developers to follow the [WooCommerce development blog](https://woocommerce.wordpress.com/) to stay up to date about everything happening in the project. You can also [follow @DevelopWC](https://twitter.com/DevelopWC) on Twitter for the latest development updates.
 
-Contribution: 2017-07-19 10:00
+## Getting Started
 
-Contribution: 2017-07-19 10:01
+To get up and running within the WooCommerce Monorepo, you will need to make sure that you have installed all of the prerequisites.
 
-Contribution: 2017-07-19 10:02
+### Prerequisites
 
-Contribution: 2017-07-19 10:03
+-   [NVM](https://github.com/nvm-sh/nvm#installing-and-updating): While you can always install Node through other means, we recommend using NVM to ensure you're aligned with the version used by our development teams. Our repository contains [an `.nvmrc` file](.nvmrc) which helps ensure you are using the correct version of Node.
+-   [PNPM](https://pnpm.io/installation): Our repository utilizes PNPM to manage project dependencies and run various scripts involved in building and testing projects.
+-   [PHP 7.2+](https://www.php.net/manual/en/install.php): WooCommerce Core currently features a minimum PHP version of 7.2. It is also needed to run Composer and various project build scripts. See [troubleshooting](DEVELOPMENT.md#troubleshooting) for troubleshooting problems installing PHP.
+-   [Composer](https://getcomposer.org/doc/00-intro.md): We use Composer to manage all of the dependencies for PHP packages and plugins.
 
-Contribution: 2017-07-19 10:04
+Once you've installed all of the prerequisites, you can run the following commands to get everything working.
 
-Contribution: 2017-07-19 10:05
+```bash
+# Ensure that you're using the correct version of Node
+nvm use
+# Install the PHP and Composer dependencies for all of the plugins, packages, and tools
+pnpm install
+# Build all of the plugins, packages, and tools in the monorepo
+pnpm run build
+```
 
-Contribution: 2017-07-19 10:06
+At this point you are now ready to begin developing and testing. All of the build outputs are cached running `pnpm run build` again will only build the plugins, packages, and tools that have changed since the last time you ran the command.
 
-Contribution: 2017-07-19 10:07
+Check out [our development guide](DEVELOPMENT.md) if you would like a more comprehensive look at working in our repository.
 
-Contribution: 2017-07-20 10:00
+## Repository Structure
 
-Contribution: 2017-07-20 10:01
+-   [**Plugins**](plugins): Our repository contains plugins that relate to or otherwise aid in the development of WooCommerce.
+    -   [**WooCommerce Core**](plugins/woocommerce): The core WooCommerce plugin is available in the plugins directory.
+-   [**Packages**](packages): Contained within the packages directory are all of the [PHP](packages/php) and [JavaScript](packages/js) provided for the community. Some of these are internal dependencies and are marked with an `internal-` prefix.
+-   [**Tools**](tools): We also have a growing number of tools within our repository. Many of these are intended to be utilities and scripts for use in the monorepo, but, this directory may also contain external tools.
 
-Contribution: 2017-07-20 10:02
+## Reporting Security Issues
 
-Contribution: 2017-07-20 10:03
+To disclose a security issue to our team, [please submit a report via HackerOne here](https://hackerone.com/automattic/).
 
-Contribution: 2017-07-20 10:04
+## Support
 
-Contribution: 2017-07-20 10:05
+This repository is not suitable for support. Please don't use our issue tracker for support requests, but for core WooCommerce issues only. Support can take place through the appropriate channels:
 
-Contribution: 2017-07-20 10:06
+-   If you have a problem, you may want to start with the [self help guide](https://docs.woocommerce.com/document/woocommerce-self-service-guide/).
+-   The [WooCommerce.com premium support portal](https://woocommerce.com/contact-us/) for customers who have purchased themes or extensions.
+-   [Our community forum on wp.org](https://wordpress.org/support/plugin/woocommerce) which is available for all WooCommerce users.
+-   [The Official WooCommerce Facebook Group](https://www.facebook.com/groups/advanced.woocommerce).
+-   For customizations, you may want to check our list of [WooExperts](https://woocommerce.com/experts/) or [Codeable](https://codeable.io/).
 
-Contribution: 2017-07-20 10:07
+NOTE: Unfortunately, we are unable to honor support requests in issues on this repository; as a result, any requests submitted in this manner will be closed.
 
-Contribution: 2017-07-20 10:08
+## Community
 
-Contribution: 2017-07-20 10:09
+For peer to peer support, real-time announcements, and office hours, please [join our slack community](https://woocommerce.com/community-slack/)!
 
-Contribution: 2017-07-25 10:00
+## Contributing to WooCommerce
 
-Contribution: 2017-07-25 10:01
-
-Contribution: 2017-07-25 10:02
-
-Contribution: 2017-07-25 10:03
-
-Contribution: 2017-07-25 10:04
-
-Contribution: 2017-07-25 10:05
-
-Contribution: 2017-07-25 10:06
-
-Contribution: 2017-07-25 10:07
-
-Contribution: 2017-07-26 10:00
-
-Contribution: 2017-07-26 10:01
-
-Contribution: 2017-08-01 10:00
-
-Contribution: 2017-08-01 10:01
-
-Contribution: 2017-08-01 10:02
-
-Contribution: 2017-08-01 10:03
-
-Contribution: 2017-08-01 10:04
-
-Contribution: 2017-08-01 10:05
-
-Contribution: 2017-08-01 10:06
-
-Contribution: 2017-08-01 10:07
-
-Contribution: 2017-08-01 10:08
-
-Contribution: 2017-08-01 10:09
-
-Contribution: 2017-08-01 10:10
-
-Contribution: 2017-08-02 10:00
-
-Contribution: 2017-08-02 10:01
-
-Contribution: 2017-08-02 10:02
-
-Contribution: 2017-08-02 10:03
-
-Contribution: 2017-08-02 10:04
-
-Contribution: 2017-08-02 10:05
-
-Contribution: 2017-08-02 10:06
-
-Contribution: 2017-08-02 10:07
-
-Contribution: 2017-08-02 10:08
-
-Contribution: 2017-08-02 10:09
-
-Contribution: 2017-08-07 10:00
-
-Contribution: 2017-08-07 10:01
-
-Contribution: 2017-08-07 10:02
-
-Contribution: 2017-08-07 10:03
-
-Contribution: 2017-08-07 10:04
-
-Contribution: 2017-08-07 10:05
-
-Contribution: 2017-08-07 10:06
-
-Contribution: 2017-08-07 10:07
-
-Contribution: 2017-08-07 10:08
-
-Contribution: 2017-08-08 10:00
-
-Contribution: 2017-08-08 10:01
-
-Contribution: 2017-08-08 10:02
-
-Contribution: 2017-08-08 10:03
-
-Contribution: 2017-08-08 10:04
-
-Contribution: 2017-08-08 10:05
-
-Contribution: 2017-08-08 10:06
-
-Contribution: 2017-08-08 10:07
-
-Contribution: 2017-08-08 10:08
-
-Contribution: 2017-08-08 10:09
-
-Contribution: 2017-08-14 10:00
-
-Contribution: 2017-08-14 10:01
-
-Contribution: 2017-08-14 10:02
-
-Contribution: 2017-08-14 10:03
-
-Contribution: 2017-08-14 10:04
-
-Contribution: 2017-08-14 10:05
-
-Contribution: 2017-08-14 10:06
-
-Contribution: 2017-08-16 10:00
-
-Contribution: 2017-08-16 10:01
-
-Contribution: 2017-08-16 10:02
-
-Contribution: 2017-08-16 10:03
-
-Contribution: 2017-08-16 10:04
-
-Contribution: 2017-08-16 10:05
-
-Contribution: 2017-08-16 10:06
-
-Contribution: 2017-08-16 10:07
-
-Contribution: 2017-08-16 10:08
-
-Contribution: 2017-08-16 10:09
-
-Contribution: 2017-08-18 10:00
-
-Contribution: 2017-08-18 10:01
-
-Contribution: 2017-08-18 10:02
-
-Contribution: 2017-08-18 10:03
-
-Contribution: 2017-08-18 10:04
-
-Contribution: 2017-08-18 10:05
-
-Contribution: 2017-08-18 10:06
-
-Contribution: 2017-08-18 10:07
-
-Contribution: 2017-08-18 10:08
-
-Contribution: 2017-08-18 10:09
-
-Contribution: 2017-08-23 10:00
-
-Contribution: 2017-08-23 10:01
-
-Contribution: 2017-08-23 10:02
-
-Contribution: 2017-08-23 10:03
-
-Contribution: 2017-08-23 10:04
-
-Contribution: 2017-08-23 10:05
-
-Contribution: 2017-08-23 10:06
-
-Contribution: 2017-08-23 10:07
-
-Contribution: 2017-08-23 10:08
-
-Contribution: 2017-08-23 10:09
-
-Contribution: 2017-08-23 10:10
-
-Contribution: 2017-08-31 10:00
-
-Contribution: 2017-08-31 10:01
-
-Contribution: 2017-08-31 10:02
-
-Contribution: 2017-09-11 10:00
-
-Contribution: 2017-09-11 10:01
-
-Contribution: 2017-09-11 10:02
-
-Contribution: 2017-09-11 10:03
-
-Contribution: 2017-09-11 10:04
-
-Contribution: 2017-09-11 10:05
-
-Contribution: 2017-09-11 10:06
-
-Contribution: 2017-09-11 10:07
-
-Contribution: 2017-09-11 10:08
-
-Contribution: 2017-09-11 10:09
-
-Contribution: 2017-09-11 10:10
-
-Contribution: 2017-09-12 10:00
-
-Contribution: 2017-09-12 10:01
-
-Contribution: 2017-09-12 10:02
-
-Contribution: 2017-09-12 10:03
-
-Contribution: 2017-09-12 10:04
-
-Contribution: 2017-09-13 10:00
-
-Contribution: 2017-09-13 10:01
-
-Contribution: 2017-09-13 10:02
-
-Contribution: 2017-09-13 10:03
-
-Contribution: 2017-09-13 10:04
-
-Contribution: 2017-09-13 10:05
-
-Contribution: 2017-09-13 10:06
-
-Contribution: 2017-09-13 10:07
-
-Contribution: 2017-09-13 10:08
-
-Contribution: 2017-09-14 10:00
-
-Contribution: 2017-09-14 10:01
-
-Contribution: 2017-09-14 10:02
-
-Contribution: 2017-09-14 10:03
-
-Contribution: 2017-09-14 10:04
-
-Contribution: 2017-09-14 10:05
-
-Contribution: 2017-09-14 10:06
-
-Contribution: 2017-09-14 10:07
-
-Contribution: 2017-09-14 10:08
-
-Contribution: 2017-09-14 10:09
-
-Contribution: 2017-09-14 10:10
-
-Contribution: 2017-09-15 10:00
-
-Contribution: 2017-09-15 10:01
-
-Contribution: 2017-09-15 10:02
-
-Contribution: 2017-09-15 10:03
-
-Contribution: 2017-09-15 10:04
-
-Contribution: 2017-09-15 10:05
-
-Contribution: 2017-09-15 10:06
-
-Contribution: 2017-09-15 10:07
-
-Contribution: 2017-09-18 10:00
-
-Contribution: 2017-09-22 10:00
-
-Contribution: 2017-09-22 10:01
-
-Contribution: 2017-09-22 10:02
-
-Contribution: 2017-09-27 10:00
-
-Contribution: 2017-09-27 10:01
-
-Contribution: 2017-09-27 10:02
-
-Contribution: 2017-09-27 10:03
-
-Contribution: 2017-09-27 10:04
-
-Contribution: 2017-09-27 10:05
-
-Contribution: 2017-09-27 10:06
-
-Contribution: 2017-09-27 10:07
-
-Contribution: 2017-09-27 10:08
-
-Contribution: 2017-09-27 10:09
-
-Contribution: 2017-09-27 10:10
-
-Contribution: 2017-09-27 10:11
-
-Contribution: 2017-09-29 10:00
-
-Contribution: 2017-09-29 10:01
-
-Contribution: 2017-09-29 10:02
-
-Contribution: 2017-09-29 10:03
-
-Contribution: 2017-09-29 10:04
-
-Contribution: 2017-09-29 10:05
-
-Contribution: 2017-09-29 10:06
-
-Contribution: 2017-09-29 10:07
-
-Contribution: 2017-09-29 10:08
-
-Contribution: 2017-09-29 10:09
-
-Contribution: 2017-10-02 10:00
-
-Contribution: 2017-10-02 10:01
-
-Contribution: 2017-10-02 10:02
-
-Contribution: 2017-10-02 10:03
-
-Contribution: 2017-10-02 10:04
-
-Contribution: 2017-10-02 10:05
-
-Contribution: 2017-10-04 10:00
-
-Contribution: 2017-10-04 10:01
-
-Contribution: 2017-10-04 10:02
-
-Contribution: 2017-10-04 10:03
-
-Contribution: 2017-10-06 10:00
-
-Contribution: 2017-10-06 10:01
-
-Contribution: 2017-10-06 10:02
-
-Contribution: 2017-10-06 10:03
-
-Contribution: 2017-10-10 10:00
-
-Contribution: 2017-10-10 10:01
-
-Contribution: 2017-10-10 10:02
-
-Contribution: 2017-10-10 10:03
-
-Contribution: 2017-10-10 10:04
-
-Contribution: 2017-10-10 10:05
-
-Contribution: 2017-10-10 10:06
-
-Contribution: 2017-10-10 10:07
-
-Contribution: 2017-10-10 10:08
-
-Contribution: 2017-10-10 10:09
-
-Contribution: 2017-10-10 10:10
-
-Contribution: 2017-10-10 10:11
-
+If you have a patch or have stumbled upon an issue with WooCommerce core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/woocommerce/woocommerce/blob/trunk/.github/CONTRIBUTING.md) for more information on how you can do this.
